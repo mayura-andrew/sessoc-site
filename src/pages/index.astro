@@ -11,7 +11,10 @@ import { Image } from "astro:assets";
   <section id="shaping-the-future-of-software-engineering">
     <div class="flexedText">
       <h1>Shaping the Future of Software Engineering at OUSL</h1>
-      <p>Join us in our mission to drive innovation and impact through software engineering.</p>
+      <p>
+        Join us in our mission to drive innovation and impact through software
+        engineering.
+      </p>
       <a href="https://www.ousl.edu.lk/sesoc/join-us">Join Us</a>
     </div>
 
@@ -32,27 +35,42 @@ import { Image } from "astro:assets";
     <div class="featureList">
       <div class="feature">
         <h3>Empowering Future Engineers</h3>
-        <p>We create initiatives and resources that enable students to excel in software engineering and develop impactful projects.</p>
+        <p>
+          We create initiatives and resources that enable students to excel in
+          software engineering and develop impactful projects.
+        </p>
       </div>
       <div class="feature">
         <h3>Collaborating Openly</h3>
-        <p>We share our projects and resources publicly. Check out <a href="https://github.com/sesoc-ousl">our Projects section</a> to see what we've been working on.</p>
+        <p>
+          We share our projects and resources publicly. Check out <a
+            href="https://github.com/sesoc-ousl">our Projects section</a
+          > to see what we've been working on.
+        </p>
       </div>
       <div class="feature">
         <h3>Innovating Rapidly</h3>
-        <p>We focus our efforts on meaningful projects, iterating quickly to refine our solutions. Move fast, innovate effectively.</p>
+        <p>
+          We focus our efforts on meaningful projects, iterating quickly to
+          refine our solutions. Move fast, innovate effectively.
+        </p>
       </div>
       <div class="feature">
         <h3>Equipping Students with Essential Skills</h3>
-        <p>By utilizing industry-standard tools and practices, we prepare students for real-world challenges, ensuring they gain hands-on experience with technologies that are in high demand in the job market.</p>
+        <p>
+          By utilizing industry-standard tools and practices, we prepare
+          students for real-world challenges, ensuring they gain hands-on
+          experience with technologies that are in high demand in the job
+          market.
+        </p>
       </div>
     </div>
   </section>
-  
+
   <section id="engineering-blog-posts">
     <!-- <BlogFeed /> -->
-  </section> 
-</PageLayout>  
+  </section>
+</PageLayout>
 
 <style lang="scss" define:vars={{ border }}>
   section {
@@ -61,7 +79,11 @@ import { Image } from "astro:assets";
     align-items: center;
     padding: 3rem 1rem; /* Reduced padding on smaller screens */
     gap: 2em;
-    background: linear-gradient(135deg, #f8f8f8, #e0e0e0); /* Gradient background */
+    background: linear-gradient(
+      135deg,
+      #f8f8f8,
+      #e0e0e0
+    ); /* Gradient background */
     border-radius: 5px;
   }
   section.fade-in {
@@ -82,22 +104,38 @@ import { Image } from "astro:assets";
   }
 
   h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem); /* Reduced font size on smaller screens */
+    font-size: clamp(
+      2rem,
+      6vw,
+      3.5rem
+    ); /* Reduced font size on smaller screens */
     color: #333; /* Darker shade for headings */
   }
 
   h2 {
-    font-size: clamp(1.75rem, 5vw, 2.5rem); /* Reduced font size on smaller screens */
+    font-size: clamp(
+      1.75rem,
+      5vw,
+      2.5rem
+    ); /* Reduced font size on smaller screens */
     color: #444; /* Slightly lighter than h1 */
   }
 
   h3 {
-    font-size: clamp(1.25rem, 4vw, 2rem); /* Reduced font size on smaller screens */
+    font-size: clamp(
+      1.25rem,
+      4vw,
+      2rem
+    ); /* Reduced font size on smaller screens */
     color: #555; /* Slightly lighter than h2 */
   }
 
   p {
-    font-size: clamp(0.9rem, 3.5vw, 1.1rem); /* Reduced font size on smaller screens */
+    font-size: clamp(
+      0.9rem,
+      3.5vw,
+      1.1rem
+    ); /* Reduced font size on smaller screens */
     color: #666; /* Lighter shade for body text */
     line-height: 1.5;
     text-align: center;
@@ -115,38 +153,46 @@ import { Image } from "astro:assets";
       align-items: center;
       justify-content: center; /* Center image */
       max-width: 100%; /* Ensure it doesn't overflow */
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    padding: 1rem; /* Add some padding for smaller screens */
+      width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain aspect ratio */
+      padding: 1rem; /* Add some padding for smaller screens */
     }
     a {
-  display: inline-block;
-  background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient from blue to light blue */
-  color: #fff; /* White text for contrast */
-  text-decoration: none;
-  padding: 0.75em 1.5em;
-  border-radius: 5px; /* Rounded corners */
-  transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-  font-size: clamp(1rem, 4vw, 1.2rem);
-  margin-top: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow for depth */
-}
+      display: inline-block;
+      background: linear-gradient(
+        135deg,
+        #007bff,
+        #00c6ff
+      ); /* Gradient from blue to light blue */
+      color: #fff; /* White text for contrast */
+      text-decoration: none;
+      padding: 0.75em 1.5em;
+      border-radius: 5px; /* Rounded corners */
+      transition:
+        background 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s; /* Smooth transition */
+      font-size: clamp(1rem, 4vw, 1.2rem);
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow for depth */
+    }
 
-/* Hover effect */
-a:hover {
-  background: linear-gradient(135deg, #0056b3, #0099ff); /* Darker gradient on hover */
-  transform: translateY(-3px); /* Slight lift effect */
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
-}
+    /* Hover effect */
+    a:hover {
+      background: linear-gradient(
+        135deg,
+        #0056b3,
+        #0099ff
+      ); /* Darker gradient on hover */
+      transform: translateY(-3px); /* Slight lift effect */
+      box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+    }
 
-/* Focus effect for accessibility */
-a:focus {
-  outline: 2px solid #0056b3; /* Outline for keyboard navigation */
-  outline-offset: 2px; /* Space between outline and element */
-}
-
-
-
+    /* Focus effect for accessibility */
+    a:focus {
+      outline: 2px solid #0056b3; /* Outline for keyboard navigation */
+      outline-offset: 2px; /* Space between outline and element */
+    }
 
     img.rounded-image {
       max-width: 100%;
@@ -169,7 +215,10 @@ a:focus {
       margin: 0 auto; /* Center the list */
 
       @media (min-width: 740px) {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+        grid-template-columns: repeat(
+          2,
+          1fr
+        ); /* Two columns on larger screens */
       }
 
       .feature {
