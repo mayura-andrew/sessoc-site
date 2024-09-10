@@ -8,7 +8,7 @@ import Bubbles from "../components/Bubbles.svelte";
 import { font } from "../styles/shared.js";
 import "../styles/global.css";
 
-const { title = "The Guardian : Engineering" } = Astro.props;
+const { title = "SESoc OUSL" } = Astro.props;
 const edit = Astro.props.edit ?? Astro.props.content?.edit ?? null;
 const { pathname = "/" } = new URL(Astro.request.url);
 
@@ -20,11 +20,12 @@ const { body, heading } = font;
     <meta charset="UTF-8" />
     <title>{title}</title>
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- this Font-face import is slow - do not use it for production Guardian sites -->
+    <meta name="description" content="Shaping the Future of Software Engineering at OUSL" />
+    <meta name="author" content="SESoc OUSL" />
+    
     <link
       href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
       rel="stylesheet"

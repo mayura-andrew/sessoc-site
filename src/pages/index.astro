@@ -3,19 +3,16 @@ import PageLayout from "../layouts/page.astro";
 import BlogFeed from "../components/BlogFeed.astro";
 
 import { border } from "../styles/shared.js";
-import home from "./home-digital-development.jpg";
+import home from "./people.jpeg";
 import { Image } from "astro:assets";
 ---
 
 <PageLayout edit="index.astro">
-  <section id="shaping-the-future-of-digital-journalism">
+  <section id="shaping-the-future-of-software-engineering">
     <div class="flexedText">
-      <h2>We're shaping the future of digital journalism.</h2>
-      <h2>
-        <a href="https://workforus.theguardian.com/careers/product-engineering"
-          >Join Us.</a
-        >
-      </h2>
+      <h1>Shaping the Future of Software Engineering at OUSL</h1>
+      <p>Join us in our mission to drive innovation and impact through software engineering.</p>
+      <a href="https://www.ousl.edu.lk/sesoc/join-us">Join Us</a>
     </div>
 
     <div class="flexedImage">
@@ -24,50 +21,52 @@ import { Image } from "astro:assets";
         src={home}
         height={home.height / 2}
         width={home.width / 2}
-        alt="Five people gathered around a table, with a man in the centre wearing an 'I heart the Guardian' tshirt"
+        alt="Students collaborating on a software project."
+        class="rounded-image"
       />
     </div>
   </section>
 
-  <section id="build-for-a-greater-cause">
-    <h3>We build in pursuit of a cause that is greater than ourselves.</h3>
-
-    <ul>
-      <li>
-        <h4>Empowering journalists</h4>
-        We build products that make it easier for journalists to publish informative
-        and delightful stories.
-      </li>
-      <li>
-        <h4>Coding in the open</h4>
-        We do much of our coding in public. Check out <a
-          href="https://github.com/guardian">our GitHub profile</a
-        > to see what we’ve been working on.
-      </li>
-      <li>
-        <h4>Moving fast</h4>
-        We spend our energy on the right things, shipping code and then rapidly iterating
-        on it. Move fast, break news.
-      </li>
-      <li>
-        <h4>Using the best tool for the job</h4>
-        We mostly program in Scala and TypeScript, but we use the best tool that
-        solves the problem.
-      </li>
-    </ul>
+  <section id="building-a-better-future">
+    <h2>Our Mission: Building a Better Future Through Software Engineering</h2>
+    <div class="featureList">
+      <div class="feature">
+        <h3>Empowering Future Engineers</h3>
+        <p>We create initiatives and resources that enable students to excel in software engineering and develop impactful projects.</p>
+      </div>
+      <div class="feature">
+        <h3>Collaborating Openly</h3>
+        <p>We share our projects and resources publicly. Check out <a href="https://github.com/sesoc-ousl">our Projects section</a> to see what we've been working on.</p>
+      </div>
+      <div class="feature">
+        <h3>Innovating Rapidly</h3>
+        <p>We focus our efforts on meaningful projects, iterating quickly to refine our solutions. Move fast, innovate effectively.</p>
+      </div>
+      <div class="feature">
+        <h3>Equipping Students with Essential Skills</h3>
+        <p>By utilizing industry-standard tools and practices, we prepare students for real-world challenges, ensuring they gain hands-on experience with technologies that are in high demand in the job market.</p>
+      </div>
+    </div>
   </section>
+  
   <section id="engineering-blog-posts">
-    <BlogFeed />
-  </section>
-</PageLayout>
+    <!-- <BlogFeed /> -->
+  </section> 
+</PageLayout>  
 
 <style lang="scss" define:vars={{ border }}>
   section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem;
-    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem; /* Reduced padding on smaller screens */
+    gap: 2em;
+    background: linear-gradient(135deg, #f8f8f8, #e0e0e0); /* Gradient background */
+    border-radius: 5px;
+  }
+  section.fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
   }
 
   // All but the first section
@@ -75,78 +74,118 @@ import { Image } from "astro:assets";
     border-top: var(--border);
   }
 
+  h1,
   h2,
   h3 {
-    line-height: 1.1;
+    line-height: 1.2;
+    text-align: center; /* Center text */
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem); /* Reduced font size on smaller screens */
+    color: #333; /* Darker shade for headings */
   }
 
   h2 {
-    font-size: clamp(2rem, 8vw, 3.75rem);
+    font-size: clamp(1.75rem, 5vw, 2.5rem); /* Reduced font size on smaller screens */
+    color: #444; /* Slightly lighter than h1 */
   }
 
   h3 {
-    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-size: clamp(1.25rem, 4vw, 2rem); /* Reduced font size on smaller screens */
+    color: #555; /* Slightly lighter than h2 */
   }
 
-  #shaping-the-future-of-digital-journalism {
+  p {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem); /* Reduced font size on smaller screens */
+    color: #666; /* Lighter shade for body text */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  #shaping-the-future-of-software-engineering {
     div.flexedText {
       flex: 1 0 50%;
+      text-align: center; /* Center text */
     }
 
     .flexedImage {
       display: flex;
-      flex: 1 0 420px;
+      flex: 1 0 auto;
       align-items: center;
+      justify-content: center; /* Center image */
+      max-width: 100%; /* Ensure it doesn't overflow */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    padding: 1rem; /* Add some padding for smaller screens */
     }
-
     a {
-      background-color: #ccc;
-      color: #111;
-      text-decoration: none;
-      padding: 0 0.25em;
-    }
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient from blue to light blue */
+  color: #fff; /* White text for contrast */
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow for depth */
+}
 
-    a:hover {
-      background-color: gold;
-    }
+/* Hover effect */
+a:hover {
+  background: linear-gradient(135deg, #0056b3, #0099ff); /* Darker gradient on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+}
 
-    img {
+/* Focus effect for accessibility */
+a:focus {
+  outline: 2px solid #0056b3; /* Outline for keyboard navigation */
+  outline-offset: 2px; /* Space between outline and element */
+}
+
+
+
+
+    img.rounded-image {
       max-width: 100%;
       height: auto;
       width: auto;
+      border-radius: 10px; /* Rounded corners for the image */
     }
   }
 
-  #build-for-a-greater-cause {
-    h3 {
-      flex: 50%;
+  #building-a-better-future {
+    h2 {
+      margin-bottom: 2rem; /* Space below heading */
     }
 
-    ul {
-      flex: 1 auto;
-      padding: 0rem;
-      list-style-type: none;
+    .featureList {
       display: grid;
-      gap: 1rem;
+      gap: 2rem;
       grid-template-columns: 1fr;
-      counter-reset: card;
+      max-width: 800px; /* Limit width for readability */
+      margin: 0 auto; /* Center the list */
 
       @media (min-width: 740px) {
-        & {
-          flex: 1 0 30rem;
-          padding: 2rem;
-          grid-template-columns: repeat(2, 1fr);
-        }
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
       }
 
-      li {
-        padding: 0.5em;
-        background-color: #333;
-        position: relative;
+      .feature {
+        padding: 1.5em;
+        background-color: #fff; /* White background for list items */
+        border: 1px solid #ddd; /* Light border for separation */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 
-        h4 {
+        h3 {
+          margin: 0 0 0.5rem 0;
+        }
+
+        p {
           margin: 0;
-          padding-bottom: 0.5em;
+          text-align: left;
         }
       }
     }

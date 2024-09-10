@@ -1,4 +1,4 @@
-# [theguardian.engineering](https://theguardian.engineering/)’s code
+# [Software Engineering Society]()’s code
 
 This website is built with [Astro](https://astro.build/) as a static site.
 
@@ -18,8 +18,3 @@ Publishing is done automatically upon merging to `main`.
 
 ## Get Involved
 
-If you’re a Guardian Developer, join our [P&E/theguardian.engineering chat][room].
-
-If you’re not a Guardian developer, [join us](https://workforus.theguardian.com/)!
-
-[room]: https://mail.google.com/chat/u/0/#chat/space/AAAABKqqeUI
